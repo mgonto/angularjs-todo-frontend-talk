@@ -1,0 +1,28 @@
+<html>
+  
+  <head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    
+
+  </head>
+  <body>
+
+    <div ng-app="sample" ng-controller="MainCtrl">
+    <div>
+      <todo-item value="pepeTodo" />
+    </div>
+      <ul>
+        <li ng-repeat="todo in todos">
+          <todo-item value="todo" />
+          
+        </li>
+      </ul>
+      <div>
+        <input type="text" ng-model="newTodoName" />
+        <input type="checkbox" ng-model="newTodoCompleted" />
+        <input type="submit" ng-click="createTodo()" />
+      </div>
+    </div>
+  </body>
+</html>
